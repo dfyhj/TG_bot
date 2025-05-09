@@ -1,0 +1,5 @@
+aiogram==3.4.1
+flask==3.0.2
+tradingview_ta==3.2.7
+matplotlib==3.8.4
+pillow==10.3.0
