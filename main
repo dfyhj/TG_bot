@@ -1,3 +1,4 @@
+print("Запуск main.py...")
 import asyncio
 import logging
 from keep_alive import keep_alive
