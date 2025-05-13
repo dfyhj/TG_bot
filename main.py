@@ -1,4 +1,5 @@
 print("Запуск main.py...")
+
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher, Router, types
@@ -168,10 +169,10 @@ async def remove_webhook():
     print("Webhook успешно удалён")
 
 async def main():
+    logging.basicConfig(level=logging.INFO)
     await remove_webhook()
     dp.include_router(router)
     await dp.start_polling(bot)
 
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
+if name == "__main__":
     asyncio.run(main())
