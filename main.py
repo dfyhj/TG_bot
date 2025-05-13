@@ -1,7 +1,6 @@
 print("Запуск main.py...")
 import asyncio
 import logging
-from keep_alive import keep_alive
 from aiogram import Bot, Dispatcher, Router, types
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
@@ -164,11 +163,15 @@ async def auto_entry(message: Message):
 async def settings(message: Message):
     await message.answer("Настройки пока в разработке.")
 
+async def remove_webhook():
+    await bot.delete_webhook(drop_pending_updates=True)
+    print("Webhook успешно удалён")
+
 async def main():
+    await remove_webhook()
     dp.include_router(router)
     await dp.start_polling(bot)
 
-if __name__ == "__main__":
-    keep_alive()
+if name == "__main__":
     logging.basicConfig(level=logging.INFO)
     asyncio.run(main())
