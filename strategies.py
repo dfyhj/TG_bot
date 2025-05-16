@@ -10,7 +10,7 @@ def rsi_stochastic_strategy(indicators):
     if rsi is None or stoch is None or stoch_signal is None:
         return False
 
-    if rsi < 30 and stoch < 20 and stoch > stoch_signal:
+    if rsi < 40 and stoch_k < 50 and stoch_d < 50:
         return True
     elif rsi > 70 and stoch > 80 and stoch < stoch_signal:
         return True
