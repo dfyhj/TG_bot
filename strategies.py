@@ -86,5 +86,6 @@ def analyze_all_strategies(analysis):
     confidence = int((len(passed) / len(strategies)) * 100)
 
     direction = "buy" if "RSI + Stochastic" in passed or "MACD + RSI" in passed else "sell" if passed else "none"
-
+print("Matches:", matches)
+print("Details:", details)
     return direction, len(passed), ", ".join(passed.keys())
