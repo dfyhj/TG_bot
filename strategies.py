@@ -1,3 +1,7 @@
+def analyze_all_strategies(analysis):
+    print("=== ANALYSIS RECEIVED ===")
+    print("Summary:", analysis.summary)
+    print("Indicators:", analysis.indicators)
 def rsi_stochastic_strategy(indicators):
     rsi = indicators.get("RSI")
     stoch = indicators.get("Stochastic %K")
